@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+  </head>
+  <body>
+    <!--DETAILS Y SUMARY PARA UNA IMAGEN DESPLEGABLE -->
+    <section>
+
+    <details>
+      <summary>Dale click</summary>
+      <img src="http://placekitten.com/g/600/400" alt="fatitos">
+    </details>
+
+    </section>
+    <!--TEXTO EDITABLE CON contenteditable-->
+    <section>
+
+    <div contenteditable="true">
+      Hola pues esto es un texto editable
+    </div>
+    <ol contenteditable="true">
+      <li>LISTA MODIFICALBE CON EL contenteditable</li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ol>
+
+    </section>
+    <!--ETIQUETAS MARK PARA RESLATAR -->
+    <section>
+
+      <p>
+        texto se puede <mark>resaltar</mark> con la etiqueta mark
+
+      </p>
+
+    </section>
+<!--BARRAS DE PROGRESO O DE CARGA -->
+    <section>
+
+      <p>3 de 10 son normalmente pendejos</p>
+      <meter value="3" min="0" max="10"></meter>
+      <br>
+      <p>El 60% de los que protestan se arriesgan a morir y vale la pena tal vez</p>
+      <meter value="0.9" ></meter>
+      <br>
+      <p>Encuentra más de mi en mi github</p>
+      <progress id="dynamic"value="0" max="100">0%</progress>
+
+      <script>
+
+        const elem =  document.getElementById('dymanic');
+
+        setInterval(() => {
+          elem.value+=1;
+          if (elem.value === 100) {
+            elem.value = 0;
+          }
+                }, 20);
+
+      </script>
+
+
+
+    </section>
+
+
+  </body>
+</html>
